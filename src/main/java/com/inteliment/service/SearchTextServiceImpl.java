@@ -36,8 +36,6 @@ public class SearchTextServiceImpl implements SearchTextService {
 		SearchResults results = new SearchResults();
 		LinkedHashMap<String, Integer> countMap = new LinkedHashMap<String, Integer>();
 
-		// String paragraph = new
-		// String(Files.readAllBytes(Paths.get("Paragraph.txt")));
 
 		for (String text : searchText) {
 			int count = StringUtils.countOccurrencesOf(paragraph, text);
@@ -53,12 +51,11 @@ public class SearchTextServiceImpl implements SearchTextService {
 	@Override
 	public List<Entry<String, Integer>> searchTopText(int topCount) {
 
-		SearchResults results = new SearchResults();
+
 		Map<String, Integer> wordMap = new HashMap<String, Integer>();
 		List<Entry<String, Integer>> sortedStringsByCount = null;
 
-		// String paragraph = new
-		// String(Files.readAllBytes(Paths.get("Paragraph.txt")));
+		
 		StringTokenizer st = new StringTokenizer(paragraph, " .,\r\n");
 
 		// count the occurances of each string and put in in map
